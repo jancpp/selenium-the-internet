@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="5484" started-at="2019-12-22T22:06:08 CST" finished-at="2019-12-22T22:06:13 CST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="5484" started-at="2019-12-22T22:06:08 CST" finished-at="2019-12-22T22:06:13 CST">
+      <class name="com.appskc.theinternet.PositiveTests">
+        <test-method status="PASS" signature="loginTests()[pri:0, instance:com.appskc.theinternet.PositiveTests@42e26948]" name="loginTests" duration-ms="5444" started-at="2019-12-22T22:06:08 CST" finished-at="2019-12-22T22:06:13 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTests -->
+      </class> <!-- com.appskc.theinternet.PositiveTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

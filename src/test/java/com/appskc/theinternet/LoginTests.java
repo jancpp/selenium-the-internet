@@ -1,25 +1,51 @@
 package com.appskc.theinternet;
 
+import org.checkerframework.checker.guieffect.qual.AlwaysSafe;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTests {
 
+	private WebDriver driver;
+
+	@Parameters({ "browser" })
+	@BeforeMethod(alwaysRun = true)
+	private void setUp(@Optional String browser) {
+		// create driver
+		switch (browser) {
+		case "chrome":
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+			driver = new ChromeDriver();
+			break;
+
+		case "firefox":
+			System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
+			driver = new FirefoxDriver();
+			break;
+
+		default:
+			System.out.println("Do not know how to start " + browser + ", starting Chrome instead");
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+			driver = new ChromeDriver();
+			break;
+		}
+
+		// maximize browser window
+		driver.manage().window().maximize();
+	}
+
 	@Test(priority = 1, groups = { "positiveTests", "smokeTests" })
 	public void positiveLoginTests() {
 		System.out.println("Starting loginTest");
-
-//		create driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		WebDriver driver = new ChromeDriver();
-
-//		maximize browser window
-		driver.manage().window().maximize();
 
 //		open test page
 		String url = "https://the-internet.herokuapp.com/login";
@@ -55,21 +81,12 @@ public class LoginTests {
 		Assert.assertTrue(actualMessage.contains(expectedMessage), "Actual message does not contain expected message."
 				+ "\nActual message: " + actualMessage + "\nExpected message: " + expectedMessage);
 
-//		close browser
-		driver.quit();
 	}
 
 	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 2, groups = { "negativeTests", "smokeTests" })
 	void negativeLoginTest(String username, String password, String expectedErrorMessage) {
 		System.out.println("Starting negativeLoginTest with " + username + "and " + password);
-
-//		create driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		WebDriver driver = new ChromeDriver();
-
-//		maximize browser window
-		driver.manage().window().maximize();
 
 //		open test page
 		String url = "https://the-internet.herokuapp.com/login";
@@ -96,8 +113,6 @@ public class LoginTests {
 				"Actual error message does not contain expected. \nActual: " + actualErrorMessage + "\nExpected: "
 						+ expectedErrorMessage);
 
-//		close browser
-		driver.quit();
 	}
 
 	void sleep(long millis) {
@@ -106,5 +121,11 @@ public class LoginTests {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@AfterMethod(alwaysRun = true)
+	private void tearDown() {
+		// close browser
+		driver.quit();
 	}
 }

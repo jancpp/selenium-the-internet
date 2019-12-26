@@ -1,2 +1,2 @@
-com/appskc/theinternet/NegativeTests.class
-com/appskc/theinternet/PositiveTests.class
+com/appskc/theinternet/LoginTests.class
+com/appskc/theinternet/ExceptionTests.class

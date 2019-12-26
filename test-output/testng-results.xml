@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="6" passed="3">
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="NegativeTestsSuite" duration-ms="14559" started-at="2019-12-23T20:10:55 CST" finished-at="2019-12-23T20:11:10 CST">
+  <suite name="ExceptionTestsSuite" duration-ms="6769" started-at="2019-12-25T18:25:25 CST" finished-at="2019-12-25T18:25:32 CST">
     <groups>
-      <group name="positiveTests">
-        <method signature="LoginTests.positiveLoginTests()[pri:1, instance:com.appskc.theinternet.LoginTests@6321e813]" name="positiveLoginTests" class="com.appskc.theinternet.LoginTests"/>
-      </group> <!-- positiveTests -->
-      <group name="smokeTests">
-        <method signature="LoginTests.positiveLoginTests()[pri:1, instance:com.appskc.theinternet.LoginTests@6321e813]" name="positiveLoginTests" class="com.appskc.theinternet.LoginTests"/>
-        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.appskc.theinternet.LoginTests@64729b1e]" name="negativeLoginTest" class="com.appskc.theinternet.LoginTests"/>
-        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.appskc.theinternet.LoginTests@5a1c0542]" name="negativeLoginTest" class="com.appskc.theinternet.LoginTests"/>
-      </group> <!-- smokeTests -->
-      <group name="negativeTests">
-        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.appskc.theinternet.LoginTests@64729b1e]" name="negativeLoginTest" class="com.appskc.theinternet.LoginTests"/>
-        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.appskc.theinternet.LoginTests@5a1c0542]" name="negativeLoginTest" class="com.appskc.theinternet.LoginTests"/>
-      </group> <!-- negativeTests -->
     </groups>
-    <test name="PositiveTests" duration-ms="3990" started-at="2019-12-23T20:10:55 CST" finished-at="2019-12-23T20:10:59 CST">
-      <class name="com.appskc.theinternet.LoginTests">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appskc.theinternet.LoginTests@6321e813]" name="setUp" is-config="true" duration-ms="2227" started-at="2019-12-23T20:10:55 CST" finished-at="2019-12-23T20:10:58 CST">
+    <test name="ExceptionTests" duration-ms="6769" started-at="2019-12-25T18:25:25 CST" finished-at="2019-12-25T18:25:32 CST">
+      <class name="com.appskc.theinternet.ExceptionTests">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appskc.theinternet.ExceptionTests@6321e813]" name="setUp" is-config="true" duration-ms="2186" started-at="2019-12-25T18:25:25 CST" finished-at="2019-12-25T18:25:28 CST">
           <params>
             <param index="0">
               <value>
@@ -30,95 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="positiveLoginTests()[pri:1, instance:com.appskc.theinternet.LoginTests@6321e813]" name="positiveLoginTests" duration-ms="1559" started-at="2019-12-23T20:10:58 CST" finished-at="2019-12-23T20:10:59 CST">
+        <test-method status="PASS" signature="disabledElementTest()[pri:0, instance:com.appskc.theinternet.ExceptionTests@6321e813]" name="disabledElementTest" duration-ms="4328" started-at="2019-12-25T18:25:28 CST" finished-at="2019-12-25T18:25:32 CST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- positiveLoginTests -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appskc.theinternet.LoginTests@6321e813]" name="tearDown" is-config="true" duration-ms="147" started-at="2019-12-23T20:10:59 CST" finished-at="2019-12-23T20:10:59 CST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.appskc.theinternet.LoginTests -->
-    </test> <!-- PositiveTests -->
-    <test name="NegativeUsernameTests" duration-ms="2989" started-at="2019-12-23T20:11:00 CST" finished-at="2019-12-23T20:11:03 CST">
-      <class name="com.appskc.theinternet.LoginTests">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appskc.theinternet.LoginTests@64729b1e]" name="setUp" is-config="true" duration-ms="1351" started-at="2019-12-23T20:11:00 CST" finished-at="2019-12-23T20:11:01 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.appskc.theinternet.LoginTests@64729b1e]" name="negativeLoginTest" duration-ms="1483" started-at="2019-12-23T20:11:01 CST" finished-at="2019-12-23T20:11:02 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[incorrectUsername]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SuperSecretPassword!]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Your username is invalid!]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appskc.theinternet.LoginTests@64729b1e]" name="tearDown" is-config="true" duration-ms="149" started-at="2019-12-23T20:11:02 CST" finished-at="2019-12-23T20:11:03 CST">
+        </test-method> <!-- disabledElementTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appskc.theinternet.ExceptionTests@6321e813]" name="tearDown" is-config="true" duration-ms="203" started-at="2019-12-25T18:25:32 CST" finished-at="2019-12-25T18:25:32 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.appskc.theinternet.LoginTests -->
-    </test> <!-- NegativeUsernameTests -->
-    <test name="NegativePasswordTests" duration-ms="7385" started-at="2019-12-23T20:11:03 CST" finished-at="2019-12-23T20:11:10 CST">
-      <class name="com.appskc.theinternet.LoginTests">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.appskc.theinternet.LoginTests@5a1c0542]" name="setUp" is-config="true" duration-ms="4241" started-at="2019-12-23T20:11:03 CST" finished-at="2019-12-23T20:11:07 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.appskc.theinternet.LoginTests@5a1c0542]" name="negativeLoginTest" duration-ms="1388" started-at="2019-12-23T20:11:07 CST" finished-at="2019-12-23T20:11:08 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[tomsmith]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IncorrectPassword]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Your password is invalid!]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appskc.theinternet.LoginTests@5a1c0542]" name="tearDown" is-config="true" duration-ms="1752" started-at="2019-12-23T20:11:08 CST" finished-at="2019-12-23T20:11:10 CST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.appskc.theinternet.LoginTests -->
-    </test> <!-- NegativePasswordTests -->
-  </suite> <!-- NegativeTestsSuite -->
+      </class> <!-- com.appskc.theinternet.ExceptionTests -->
+    </test> <!-- ExceptionTests -->
+  </suite> <!-- ExceptionTestsSuite -->
 </testng-results>

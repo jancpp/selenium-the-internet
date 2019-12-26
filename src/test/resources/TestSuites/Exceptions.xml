@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ExceptionTestsSuite" verbose="1">
+
+	<test name="ExceptionTests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.appskc.theinternet.ExceptionTests">
+				<methods>
+					<include name="disabledElementTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
